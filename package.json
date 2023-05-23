@@ -1,0 +1,57 @@
+{
+  "name": "mobile-app-upgrade-api",
+  "version": "1.0.0",
+  "description": "This API provides an ability inform mobile app users of an upgrade and can either initiate force upgrade or light upgrade.",
+  "main": "index.ts",
+  "repository": "https://github.com/Maxwell-ihiaso/mobile-app-upgrade-api.git",
+  "author": "Maxwell Ihiaso (torchLight Inc.)",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "expo",
+    "app upgrade",
+    "mobile",
+    "react native"
+  ],
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.2.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cors": "^2.8.13",
+    "@types/express": "^4.17.17",
+    "@types/http-errors": "^2.0.1",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^20.2.3",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.2",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "ts-node-dev": "^2.0.0",
+    "tsc": "^2.0.4",
+    "typescript": "*"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "start": "node index",
+    "dev": "ts-node-dev  --respawn --pretty --transpile-only index.ts",
+    "build": "ts-node index.ts"
+  }
+}

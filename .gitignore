@@ -1,0 +1,5 @@
+node_modules
+.env
+src/middleware/logEvents.ts
+
+yarn-error.log
