@@ -27,6 +27,7 @@ const app = express();
 void connectDB();
 
 // custom middleware logger
+// eslint-disable-next-line @typescript-eslint/no-misused-promises
 app.use(logger);
 
 // Handle options credentials check - before CORS!

@@ -1,6 +1,6 @@
 import { type JwtPayload } from "jsonwebtoken";
 import { type Request } from "express";
-import { type Document } from "mongoose";
+import { type Document, type Types } from "mongoose";
 
 export interface HttpError extends Error {
   status: number;
@@ -30,11 +30,26 @@ export interface IRolesList {
 // Mongoose User model
 export interface IUser extends Document {
   username: string;
-  roles?: IRolesList;
+  fname: string;
+  lname: string;
+  email: string;
   password: string;
+  image: string;
   refreshToken?: string;
 }
 
+// Mongoose Project model
+export interface IProject extends Document {
+  xApiKey: string;
+  appInfo: {
+    app_name: string;
+    app_version: string;
+    platform: string;
+    environmentL: string;
+    app_language: string;
+    user: Types.ObjectId;
+  };
+}
 // Mongoose Employees Model
 export interface IEmployees extends Document {
   firstname: string;

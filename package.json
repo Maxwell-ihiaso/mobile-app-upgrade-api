@@ -52,6 +52,7 @@
     "prepare": "husky install",
     "start": "node index",
     "dev": "ts-node-dev  --respawn --pretty --transpile-only index.ts",
-    "build": "ts-node index.ts"
+    "build": "ts-node index.ts",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx ."
   }
 }
