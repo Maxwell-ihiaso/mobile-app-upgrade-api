@@ -1,12 +1,12 @@
-import { type NextFunction, type Request, type Response } from "express";
-import allowedOrigins from "../config/allowedOrigins";
+import { type NextFunction, type Request, type Response } from 'express'
+import allowedOrigins from '../config/allowedOrigins'
 
 const credentials = (req: Request, res: Response, next: NextFunction): void => {
-  const origin = req.headers.origin;
+  const origin = req.headers.origin
   if (origin != null && allowedOrigins.includes(origin)) {
-    res.header("Access-Control-Allow-Credentials", "true");
+    res.header('Access-Control-Allow-Credentials', 'true')
   }
-  next();
-};
+  next()
+}
 
-export default credentials;
+export default credentials

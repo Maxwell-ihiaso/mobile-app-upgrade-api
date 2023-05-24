@@ -1,6 +1,6 @@
-import { model, Schema } from "mongoose";
-import { type IUser } from "../interfaces/interface";
-import bcrypt from "bcrypt";
+import { model, Schema } from 'mongoose'
+import { type IUser } from '../interfaces/interface'
+import bcrypt from 'bcrypt'
 
 const userSchema = new Schema<IUser>(
   {
@@ -8,43 +8,43 @@ const userSchema = new Schema<IUser>(
       type: String,
       lowercase: true,
       unique: true,
-      required: true,
+      required: true
     },
     fname: {
       type: String,
       lowercase: true,
-      required: true,
+      required: true
     },
     lname: {
       type: String,
       lowercase: true,
-      required: true,
+      required: true
     },
     email: {
       type: String,
       lowercase: true,
       unique: true,
-      required: true,
+      required: true
     },
     password: {
       type: String,
-      required: true,
+      required: true
     },
     image: String,
-    refreshToken: String,
+    refreshToken: String
   },
   {
     timestamps: true,
-    strict: true,
+    strict: true
   }
-);
+)
 
-userSchema.pre("save", async function (next) {
-  if (this.isModified("password")) {
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt);
+userSchema.pre('save', async function (next) {
+  if (this.isModified('password')) {
+    const salt = await bcrypt.genSalt(10)
+    this.password = await bcrypt.hash(this.password, salt)
   }
-  next();
-});
+  next()
+})
 
-export default model<IUser>("User", userSchema);
+export default model<IUser>('User', userSchema)

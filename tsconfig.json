@@ -1,23 +1,23 @@
 {
-	"compilerOptions": {
-		"outDir": "dist",
-		"target": "ESNext",
-		"module": "CommonJS",
-		"moduleResolution": "node",
-		"esModuleInterop": true,
-		"downlevelIteration": true,
-		"allowSyntheticDefaultImports": true,
-		"importHelpers": true,
-		"skipLibCheck": true,
-		"sourceMap": true,
-		"removeComments": true,
-		"noEmitOnError": true,
-		"strict": false,
-		"alwaysStrict": false,
-		"noImplicitAny": false,
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ESNext",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "downlevelIteration": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "removeComments": true,
+    "noEmitOnError": true,
+    "strict": false,
+    "alwaysStrict": false,
+    "noImplicitAny": false,
     "strictNullChecks": true,
-		"typeRoots": ["node_modules/@types/"]
-	},
-	"include": ["index.ts", "src/**/*.ts"],
-	"exclude": ["node_modules", "dist", "__tests__"]
+    "typeRoots": ["node_modules/@types/"]
+  },
+  "include": ["index.ts", "src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "__tests__"]
 }

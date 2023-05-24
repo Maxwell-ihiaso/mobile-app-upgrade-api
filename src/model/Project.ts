@@ -1,6 +1,6 @@
 // topic.model.ts
-import { model, Schema } from "mongoose";
-import { type IProject } from "../interfaces/interface";
+import { model, Schema } from 'mongoose'
+import { type IProject } from '../interfaces/interface'
 
 const projectSchema: Schema = new Schema<IProject>(
   {
@@ -11,12 +11,12 @@ const projectSchema: Schema = new Schema<IProject>(
       app_language: { type: String },
       platform: { type: String, required: true },
       environment: { type: String, required: true },
-      user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-    },
+      user: { type: Schema.Types.ObjectId, ref: 'User', required: true }
+    }
   },
   {
-    timestamps: true,
+    timestamps: true
   }
-);
+)
 
-export default model<IProject>("Project", projectSchema);
+export default model<IProject>('Project', projectSchema)
