@@ -16,7 +16,7 @@ Method: GET
 Route: https://localhost:3001/api/v1/project/versions/check
 ```
 
-> This API is used for checking the app version is marked for upgrade or not.
+> This API is used for checking if the app version is marked for upgrade or not.
 
 ```bash
 Request Headers:
